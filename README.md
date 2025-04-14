@@ -1,4 +1,4 @@
-# 🚀 My Yew App
+# 🚀 Oh My Yew
 
 *A learn-as-you-go project to introduce myself to WASM using the Rust [Yew](https://yew.rs/) Framework — documenting different approaches for future reference.*
 
