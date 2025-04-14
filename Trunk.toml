@@ -1,0 +1,6 @@
+# Trunk.toml
+[build]
+target = "index.html"
+
+[watch]
+paths = ["static/content"]

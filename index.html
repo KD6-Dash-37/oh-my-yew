@@ -1,0 +1,65 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Yew App</title>
+
+    <base data-trunk-public-url>
+    
+    <!-- AG Grid CSS -->
+    <link data-trunk
+        rel="copy-file"
+        href="static/vendor/ag-grid-community/styles/ag-grid.css"
+        data-target-path="vendor/ag-grid-community/styles"
+    />
+    <link data-trunk
+        rel="copy-file"
+        href="static/vendor/ag-grid-community/styles/ag-theme-alpine.css"
+        data-target-path="vendor/ag-grid-community/styles"
+    />
+    <link
+        rel="stylesheet"
+        href="/vendor/ag-grid-community/styles/ag-grid.css"
+    />
+    <link
+        rel="stylesheet"
+        href="/vendor/ag-grid-community/styles/ag-theme-alpine.css"
+    />
+</head>
+
+<body>
+    <main id="root"></main>
+
+    <!-- Rust WASM -->
+    <link data-trunk
+        rel="rust"
+        href="Cargo.toml"
+    />
+
+    <!-- Third-party Plotly JS -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <!-- AG Grid Community Bundle -->
+    <script data-trunk 
+        src="static/vendor/ag-grid-community/dist/ag-grid-community.min.js" 
+        data-target-path="vendor/ag-grid-community/dist">
+    </script>
+
+    <!-- AG Grid Enterprise Bundle -->
+    <script data-trunk 
+        src="static/vendor/ag-grid-enterprise/dist/ag-grid-enterprise.min.js" 
+        data-target-path="vendor/ag-grid-enterprise"
+    ></script>
+
+    <!-- AG-Grid Web Component Wrapper-->
+    <script data-trunk
+        src="static/js/aggrid-wrapper.js"
+        type="module"
+        data-target-path="js"
+    ></script>
+</body>
+
+</html>
