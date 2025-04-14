@@ -7,6 +7,11 @@
 - 🔄 JS Interoperability
   - 🧪 WASM bindings to generate a Plotly chart  
   - 🧩 JS Web Component (AG Grid) integration
+- 📚 Static Content System
+  - Markdown files (`static/content/*.md`) with frontmatter metadata  
+  - Rust `build.rs` generates a docs index at compile time  
+  - Fully static site — no runtime fetches  
+  - Hot reload supported for content edits via Trunk
 
 If you want to run this repo locally, you'll need Rust and `npm`.  
 👉 `npm` is only used at *fetch time* to download JS libraries — not at build or runtime.
@@ -254,6 +259,20 @@ We used simple shell scripts to automate fetching large JS libraries (like AG Gr
 - Avoids checking in `node_modules/` or vendor JS code.
 - Ensures repeatable builds — just re-run the script if AG Grid releases a new version.
 - `npm` is *only* a build-time fetch tool — not required for runtime.
+
+---
+
+## MarkDown to Static Page
+
+This project supports fully static markdown-driven pages with metadata — great for documentation or blog-style content.
+
+Markdown files are placed in:
+
+```
+static/content/*.md
+```
+
+Each file uses YAML frontmatter for metadata and on build the page and content is automatically added to the web app.
 
 ---
 
