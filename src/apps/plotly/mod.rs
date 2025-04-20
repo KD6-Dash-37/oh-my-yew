@@ -1,15 +1,13 @@
-// src/pages/chart.rs
+// src/apps/plotly/mod.rs
+
 use yew::prelude::*;
-use yew_router::prelude::*;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsValue;
 use serde_wasm_bindgen::to_value;
 use serde_json::json; 
 
-use crate::app::Route;
 
-
-#[wasm_bindgen(module = "/static/js/chart.js")]
+#[wasm_bindgen(module = "/static/js/plotly.js")]
 extern "C" {
     #[wasm_bindgen(js_name = "renderChart")]
     pub fn render_chart(id: &str, data: JsValue, layout: JsValue);
@@ -33,8 +31,7 @@ fn get_chart_data_for_instrument(instrument: &str) -> (Vec<f64>, Vec<f64>) {
 }
 
 
-
-#[function_component(Chart)]
+#[function_component(PlotlyChart)]
 pub fn chart() -> Html {
     let options = vec![
         "BTC-PERPETUAL",
@@ -57,7 +54,7 @@ pub fn chart() -> Html {
     let html = html! {
         <>
             <h1>{ "Chart" }</h1>
-            <Link<Route> to={Route::Home}>{ "Back to Home"}</Link<Route>>
+            // <Link<Route> to={Route::Home}>{ "Back to Home"}</Link<Route>>
 
             <div>
                 <label>{"Instrument"}</label>

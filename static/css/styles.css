@@ -1,0 +1,34 @@
+/* Layout Wrapper */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    transition: margin-left 0.3s ease;
+}
+
+.icon-link {
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.menu-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.child-list {
+    padding-left: 1rem;
+    font-size: 0.95rem;
+}

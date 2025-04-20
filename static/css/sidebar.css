@@ -1,0 +1,56 @@
+/* static/css/sidebar.css */
+
+
+.sidebar {
+    width: 250px;
+    background-color: #f3f3f3;
+    transition: margin-left 0.3s ease;
+    overflow-y: auto;
+}
+
+.sidebar.closed {
+    margin-left: -250px;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar nav ul.child-list {
+    padding-left: 1rem; /* indent child list */
+    margin-top: 0.25rem;
+}
+
+.sidebar nav ul.child-list li {
+    font-size: 0.9rem; /* slightly smaller font */
+    margin-bottom: 0.25rem;
+}
+
+
+/* Mini Sidebar */
+.mini-sidebar {
+    width: 60px;
+    background-color: #e0e0e0;
+    transition: margin-left 0.3s ease;
+    overflow-y: auto;
+}
+
+.mini-sidebar.closed {
+    margin-left: -60px;
+}
+
+.mini-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
